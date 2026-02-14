@@ -8,11 +8,7 @@ void main() {
   testWidgets('BottomNavBar displays all items', (WidgetTester tester) async {
     await tester.pumpWidget(
       const ProviderScope(
-        child: MaterialApp(
-          home: Scaffold(
-            bottomNavigationBar: BottomNavBar(),
-          ),
-        ),
+        child: MaterialApp(home: Scaffold(bottomNavigationBar: BottomNavBar())),
       ),
     );
 
