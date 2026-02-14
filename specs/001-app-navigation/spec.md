@@ -67,15 +67,6 @@ As a user, I want to navigate to the Profile tab and see an app bar with "Profil
 
 ---
 
-## Functional Requirements
-
-1. The app must display a bottom navigation bar with four tabs: Home, Workouts, Trends, Profile.
-2. Tapping a tab must switch the displayed screen to the corresponding tab's content.
-3. The Home tab screen must display only centered text "Home" with no app bar.
-4. The Workouts, Trends, and Profile tab screens must each display an app bar with the respective tab name as the title.
-5. The bottom navigation bar must remain visible on all screens.
-6. Tab switching must be smooth and responsive.
-
 ## Key Entities
 
 - BottomNavigationBar widget
