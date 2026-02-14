@@ -56,11 +56,3 @@ Test-First (TDD): Tests written → User approved → Tests fail → Then implem
 These principles supersede all other guidance and must guide every spec, plan, task, and implementation. Constitution supersedes all other practices; Amendments require documentation, approval, migration plan. All PRs/reviews must verify compliance; Complexity must be justified.
 
 **Version**: 1.0.1 | **Ratified**: 2026-02-14 | **Last Amended**: 2026-02-14
-
-Test-First (TDD): Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced. All PRs/reviews must verify compliance with principles. Create PR to merge with master branch after pushing to remote.
-
-## Governance
-
-These principles supersede all other guidance and must guide every spec, plan, task, and implementation. Constitution supersedes all other practices; Amendments require documentation, approval, migration plan. All PRs/reviews must verify compliance; Complexity must be justified.
-
-**Version**: 1.0.1 | **Ratified**: 2026-02-14 | **Last Amended**: 2026-02-14
