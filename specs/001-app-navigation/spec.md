@@ -93,67 +93,31 @@ As a user, I want to navigate to the Profile tab and see an app bar with "Profil
 - TrendsScreen widget (with app bar)
 - ProfileScreen widget (with app bar)
 
-### User Story 3 - [Brief Title] (Priority: P3)
+## Edge Cases
 
-[Describe this user journey in plain language]
-
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-
----
-
-[Add more user stories as needed, each with an assigned priority]
-
-### Edge Cases
-
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right edge cases.
--->
-
-- What happens when [boundary condition]?
-- How does system handle [error scenario]?
+- **Tab Retapping**: When user taps the currently selected tab, the screen should remain unchanged (no unnecessary rebuilds).
+- **Screen Rotation**: Navigation state should persist across device orientation changes.
+- **Back Navigation**: Pressing back button should follow platform conventions (exit app from home screen).
+- **Accessibility**: Navigation should work with screen readers and keyboard navigation.
 
 ## Requirements *(mandatory)*
 
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right functional requirements.
--->
-
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
-
-*Example of marking unclear requirements:*
-
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
-
-### Key Entities *(include if feature involves data)*
-
-- **[Entity 1]**: [What it represents, key attributes without implementation]
-- **[Entity 2]**: [What it represents, relationships to other entities]
+- **FR-001**: System MUST display a bottom navigation bar with four tabs: Home, Workouts, Trends, Profile.
+- **FR-002**: System MUST switch screens instantly when tabs are tapped.
+- **FR-003**: Home screen MUST display centered "Home" text without an app bar.
+- **FR-004**: Workouts, Trends, and Profile screens MUST display app bars with respective titles.
+- **FR-005**: Bottom navigation bar MUST remain visible on all screens.
+- **FR-006**: Tab switching MUST complete within 100ms and maintain 60fps.
 
 ## Success Criteria *(mandatory)*
 
-<!--
-  ACTION REQUIRED: Define measurable success criteria.
-  These must be technology-agnostic and measurable.
--->
-
 ### Measurable Outcomes
 
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **SC-001**: All four tabs are navigable and display correct content.
+- **SC-002**: Home tab shows centered text without app bar.
+- **SC-003**: Other tabs show app bars with correct titles.
+- **SC-004**: Navigation switches in <100ms with 60fps performance.
+- **SC-005**: All acceptance scenarios pass in automated tests.
+- **SC-006**: App works correctly on both iOS and Android platforms.
