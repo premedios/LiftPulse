@@ -1,6 +1,6 @@
 <!-- Sync Impact Report
-Version change: 1.0.0 → 1.0.1
-List of modified principles: III. Testing - added "code coverage"
+Version change: 1.0.1 → 1.0.2
+List of modified principles: Development Workflow - added build number increment after feature implementation
 Added sections: None
 Removed sections: None
 Templates requiring updates: None
@@ -49,10 +49,10 @@ Flutter SDK latest, Dart, Riverpod latest, Drift latest, flutter_animate, mockta
 
 ## Development Workflow
 
-Test-First (TDD): Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced. All PRs/reviews must verify compliance with principles.
+Test-First (TDD): Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced. All PRs/reviews must verify compliance with principles. After implementing a feature and tests pass, increment the build number in pubspec.yaml.
 
 ## Governance
 
 These principles supersede all other guidance and must guide every spec, plan, task, and implementation. Constitution supersedes all other practices; Amendments require documentation, approval, migration plan. All PRs/reviews must verify compliance; Complexity must be justified.
 
-**Version**: 1.0.1 | **Ratified**: 2026-02-14 | **Last Amended**: 2026-02-14
+**Version**: 1.0.2 | **Ratified**: 2026-02-14 | **Last Amended**: 2026-02-14
