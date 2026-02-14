@@ -50,63 +50,47 @@ specs/001-app-navigation/
 
 ### Source Code (repository root)
 
-## Project Structure
-
-### Documentation (this feature)
-
-```text
-specs/[###-feature]/
-├── plan.md              # This file (/speckit.plan command output)
-├── research.md          # Phase 0 output (/speckit.plan command)
-├── data-model.md        # Phase 1 output (/speckit.plan command)
-├── quickstart.md        # Phase 1 output (/speckit.plan command)
-├── contracts/           # Phase 1 output (/speckit.plan command)
-└── tasks.md             # Phase 2 output (/speckit.tasks command - NOT created by /speckit.plan)
-```
-
-### Source Code (repository root)
-
 ```text
 lib/
-├── main.dart                    # App entry point with navigation setup
+├── main.dart                    # App entry point with navigation integration
 ├── navigation/
-│   ├── app_router.dart          # Router configuration
-│   └── bottom_nav_bar.dart      # BottomNavigationBar widget
+│   ├── app_router.dart          # Navigation logic and screen mapping
+│   └── bottom_nav_bar.dart      # Bottom navigation bar widget
+├── providers/
+│   └── navigation_provider.dart # Riverpod state management for tab index
 ├── screens/
 │   ├── home/
-│   │   └── home_screen.dart     # Home screen with centered text
+│   │   └── home_screen.dart     # Home tab screen (centered text)
 │   ├── workouts/
-│   │   └── workouts_screen.dart # Workouts screen with app bar
+│   │   └── workouts_screen.dart # Workouts tab screen (with app bar)
 │   ├── trends/
-│   │   └── trends_screen.dart   # Trends screen with app bar
+│   │   └── trends_screen.dart   # Trends tab screen (with app bar)
 │   └── profile/
-│       └── profile_screen.dart  # Profile screen with app bar
-├── providers/
-│   └── navigation_provider.dart # Riverpod provider for nav state
+│       └── profile_screen.dart  # Profile tab screen (with app bar)
 └── widgets/
-    └── nav_item.dart            # Reusable nav item widget
+    └── nav_item.dart            # Reusable navigation item widget
 
 test/
-├── widget_test.dart             # Existing test
+├── widget_test.dart             # Main app smoke test
 ├── navigation/
-│   ├── bottom_nav_bar_test.dart
-│   └── app_router_test.dart
-├── screens/
-│   ├── home_screen_test.dart
-│   ├── workouts_screen_test.dart
-│   ├── trends_screen_test.dart
-│   └── profile_screen_test.dart
-└── providers/
-    └── navigation_provider_test.dart
+│   ├── app_router_test.dart     # Unit tests for app router
+│   └── bottom_nav_bar_test.dart # Widget tests for bottom nav bar
+├── providers/
+│   └── navigation_provider_test.dart # Unit tests for navigation provider
+└── screens/
+    ├── home_screen_test.dart    # Widget test for home screen
+    ├── workouts_screen_test.dart # Widget test for workouts screen
+    ├── trends_screen_test.dart  # Widget test for trends screen
+    └── profile_screen_test.dart # Widget test for profile screen
 ```
 
-**Structure Decision**: Mobile Flutter app structure with lib/ for source code and test/ for tests. Navigation logic separated into dedicated folder, screens organized by feature, providers for state management, and widgets for reusability.
+**Structure Decision**: Single Flutter mobile app structure with MVVM separation (providers for state, screens for UI, navigation for routing). Tests mirror source structure for maintainability.
 
 ## Complexity Tracking
 
 > **Fill ONLY if Constitution Check has violations that must be justified**
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
+| ----------- | ------------ | ------------------------------------- |
 | [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
 | [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
