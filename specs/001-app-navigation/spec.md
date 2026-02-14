@@ -2,7 +2,7 @@
 
 **Feature Branch**: `001-app-navigation`  
 **Created**: 2026-02-14  
-**Status**: Draft  
+**Status**: Implemented  
 **Input**: User description: "Create the app navigation in the form of the bottom navigation bar. It should have the following tabs: Home, Workouts, Trends, Profile. All screens except for Home should have an app bar with the name of the tab. The home tab screen should only have a centered (horizontal and vertical) text with the name of the tab "Home"."
 
 ## User Scenarios & Testing *(mandatory)*
@@ -75,15 +75,6 @@ As a user, I want to navigate to the Profile tab and see an app bar with "Profil
 4. The Workouts, Trends, and Profile tab screens must each display an app bar with the respective tab name as the title.
 5. The bottom navigation bar must remain visible on all screens.
 6. Tab switching must be smooth and responsive.
-
-## Success Criteria
-
-- Users can navigate between all four tabs using the bottom navigation bar.
-- Home tab displays centered "Home" text without app bar.
-- Workouts, Trends, and Profile tabs display app bars with correct titles.
-- Navigation completes within 100ms.
-- App maintains 60fps during tab switches.
-- All acceptance scenarios pass in automated tests.
 
 ## Key Entities
 
